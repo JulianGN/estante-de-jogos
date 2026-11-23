@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" viewBox="0 0 192 192">
+  <rect x="10" y="10" width="172" height="172" rx="28" fill="#5C2D16" stroke="#D97706" stroke-width="6"/>
+  <rect x="24" y="24" width="144" height="144" rx="14" fill="#8D4925"/>
+  <!-- Barra central -->
+  <rect x="91" y="24" width="10" height="144" fill="#4A210D"/>
+  <!-- Triângulos superiores -->
+  <polygon points="30,24 44,78 58,24" fill="#FDE68A"/>
+  <polygon points="60,24 74,78 88,24" fill="#1F2937"/>
+  <polygon points="104,24 118,78 132,24" fill="#FDE68A"/>
+  <polygon points="134,24 148,78 162,24" fill="#1F2937"/>
+  <!-- Triângulos inferiores -->
+  <polygon points="30,168 44,114 58,168" fill="#1F2937"/>
+  <polygon points="60,168 74,114 88,168" fill="#FDE68A"/>
+  <polygon points="104,168 118,114 132,168" fill="#1F2937"/>
+  <polygon points="134,168 148,114 162,168" fill="#FDE68A"/>
+  <!-- Peças -->
+  <circle cx="44" cy="40" r="10" fill="#F8FAFC" stroke="#475569" stroke-width="2.5"/>
+  <circle cx="74" cy="152" r="10" fill="#111827" stroke="#9CA3AF" stroke-width="2.5"/>
+  <!-- Dado -->
+  <rect x="118" y="80" width="32" height="32" rx="7" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+  <circle cx="127" cy="89" r="3" fill="#0F172A"/>
+  <circle cx="141" cy="103" r="3" fill="#0F172A"/>
+  <circle cx="134" cy="96" r="3" fill="#0F172A"/>
+</svg>

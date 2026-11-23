@@ -1,0 +1,181 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://core/ui/BaseGameHUD.gd" id="1_script"]
+[ext_resource type="Theme" path="res://core/ui/theme/estante_theme.tres" id="2_theme"]
+
+[node name="BaseGameHUD" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("2_theme")
+script = ExtResource("1_script")
+
+[node name="TopBar" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 128.0
+grow_horizontal = 2
+
+[node name="TopRow" type="HBoxContainer" parent="TopBar"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="ExitButton" type="Button" parent="TopBar/TopRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(160, 80)
+layout_mode = 2
+size_flags_vertical = 4
+text = "← Sair"
+
+[node name="HeaderText" type="VBoxContainer" parent="TopBar/TopRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_constants/separation = 4
+
+[node name="TitleLabel" type="Label" parent="TopBar/TopRow/HeaderText"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 34
+text = "Jogo"
+
+[node name="SubtitleLabel" type="Label" parent="TopBar/TopRow/HeaderText"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.68, 0.76, 0.87, 1)
+theme_override_font_sizes/font_size = 22
+text = "Modo"
+
+[node name="ExtraSlot" type="HBoxContainer" parent="TopBar/TopRow"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 12
+
+[node name="ExitConfirmOverlay" type="ColorRect" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.02, 0.04, 0.08, 0.82)
+
+[node name="Margin" type="MarginContainer" parent="ExitConfirmOverlay"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_right = 64
+
+[node name="ConfirmCard" type="PanelContainer" parent="ExitConfirmOverlay/Margin"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Column" type="VBoxContainer" parent="ExitConfirmOverlay/Margin/ConfirmCard"]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="PromptTitle" type="Label" parent="ExitConfirmOverlay/Margin/ConfirmCard/Column"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 38
+text = "Sair da partida?"
+horizontal_alignment = 1
+
+[node name="PromptBody" type="Label" parent="ExitConfirmOverlay/Margin/ConfirmCard/Column"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.84, 0.89, 0.95, 1)
+text = "Você voltará para a Estante de Jogos e a partida atual será encerrada."
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Actions" type="HBoxContainer" parent="ExitConfirmOverlay/Margin/ConfirmCard/Column"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="ContinueButton" type="Button" parent="ExitConfirmOverlay/Margin/ConfirmCard/Column/Actions"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 92)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Continuar"
+
+[node name="ConfirmExitButton" type="Button" parent="ExitConfirmOverlay/Margin/ConfirmCard/Column/Actions"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 92)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Sair"
+
+[node name="ResultOverlay" type="ColorRect" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.02, 0.04, 0.08, 0.82)
+
+[node name="Margin" type="MarginContainer" parent="ResultOverlay"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_right = 64
+
+[node name="ResultCard" type="PanelContainer" parent="ResultOverlay/Margin"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Column" type="VBoxContainer" parent="ResultOverlay/Margin/ResultCard"]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="ResultTitleLabel" type="Label" parent="ResultOverlay/Margin/ResultCard/Column"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.96, 0.68, 0.24, 1)
+theme_override_font_sizes/font_size = 44
+text = "Vitória!"
+horizontal_alignment = 1
+
+[node name="ResultDetailsLabel" type="Label" parent="ResultOverlay/Margin/ResultCard/Column"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.84, 0.89, 0.95, 1)
+text = "Detalhes"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Actions" type="HBoxContainer" parent="ResultOverlay/Margin/ResultCard/Column"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="ReplayButton" type="Button" parent="ResultOverlay/Margin/ResultCard/Column/Actions"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 92)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Jogar Novamente"
+
+[node name="ResultExitButton" type="Button" parent="ResultOverlay/Margin/ResultCard/Column/Actions"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 92)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Estante"

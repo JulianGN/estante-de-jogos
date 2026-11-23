@@ -1,0 +1,190 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://core/ui/MainMenu.gd" id="1_script"]
+[ext_resource type="Theme" path="res://core/ui/theme/estante_theme.tres" id="2_theme"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_theme")
+script = ExtResource("1_script")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.06, 0.09, 0.15, 1)
+
+[node name="SafeMargin" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 64
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 48
+
+[node name="Layout" type="VBoxContainer" parent="SafeMargin"]
+layout_mode = 2
+theme_override_constants/separation = 28
+
+[node name="HeaderRow" type="HBoxContainer" parent="SafeMargin/Layout"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="TitleBlock" type="VBoxContainer" parent="SafeMargin/Layout/HeaderRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="AppTitle" type="Label" parent="SafeMargin/Layout/HeaderRow/TitleBlock"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 52
+text = "Estante de Jogos"
+
+[node name="AppSubtitle" type="Label" parent="SafeMargin/Layout/HeaderRow/TitleBlock"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.65, 0.74, 0.86, 1)
+theme_override_font_sizes/font_size = 26
+text = "Jogos clássicos em um só lugar"
+
+[node name="SfxToggleButton" type="Button" parent="SafeMargin/Layout/HeaderRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(180, 88)
+layout_mode = 2
+size_flags_vertical = 4
+text = "Som: ON"
+
+[node name="SectionTitle" type="Label" parent="SafeMargin/Layout"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.96, 0.68, 0.24, 1)
+theme_override_font_sizes/font_size = 28
+text = "Catálogo Disponível"
+
+[node name="EmptyStateLabel" type="Label" parent="SafeMargin/Layout"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.7, 0.76, 0.84, 1)
+text = "Nenhum jogo habilitado no catálogo no momento."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="CatalogScroll" type="ScrollContainer" parent="SafeMargin/Layout"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="GamesList" type="VBoxContainer" parent="SafeMargin/Layout/CatalogScroll"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 24
+
+[node name="ModeModalOverlay" type="ColorRect" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.02, 0.04, 0.08, 0.82)
+
+[node name="CenterBox" type="MarginContainer" parent="ModeModalOverlay"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 48
+theme_override_constants/margin_right = 48
+
+[node name="ModalCard" type="PanelContainer" parent="ModeModalOverlay/CenterBox"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="ModalColumn" type="VBoxContainer" parent="ModeModalOverlay/CenterBox/ModalCard"]
+layout_mode = 2
+theme_override_constants/separation = 22
+
+[node name="ModalTitleLabel" type="Label" parent="ModeModalOverlay/CenterBox/ModalCard/ModalColumn"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 44
+text = "Jogo"
+
+[node name="ModalDescriptionLabel" type="Label" parent="ModeModalOverlay/CenterBox/ModalCard/ModalColumn"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.84, 0.89, 0.95, 1)
+theme_override_font_sizes/font_size = 26
+text = "Descrição"
+autowrap_mode = 3
+
+[node name="ModalStatsLabel" type="Label" parent="ModeModalOverlay/CenterBox/ModalCard/ModalColumn"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.58, 0.78, 0.66, 1)
+theme_override_font_sizes/font_size = 24
+text = "Histórico"
+autowrap_mode = 3
+
+[node name="ModeLabel" type="Label" parent="ModeModalOverlay/CenterBox/ModalCard/ModalColumn"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.96, 0.68, 0.24, 1)
+theme_override_font_sizes/font_size = 26
+text = "Modo de Partida"
+
+[node name="ModeButtonsBox" type="HBoxContainer" parent="ModeModalOverlay/CenterBox/ModalCard/ModalColumn"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="DifficultySection" type="VBoxContainer" parent="ModeModalOverlay/CenterBox/ModalCard/ModalColumn"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="DifficultyLabel" type="Label" parent="ModeModalOverlay/CenterBox/ModalCard/ModalColumn/DifficultySection"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.96, 0.68, 0.24, 1)
+theme_override_font_sizes/font_size = 26
+text = "Dificuldade da IA"
+
+[node name="DifficultyButtonsBox" type="HBoxContainer" parent="ModeModalOverlay/CenterBox/ModalCard/ModalColumn/DifficultySection"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="ActionRow" type="HBoxContainer" parent="ModeModalOverlay/CenterBox/ModalCard/ModalColumn"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="CancelModalButton" type="Button" parent="ModeModalOverlay/CenterBox/ModalCard/ModalColumn/ActionRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 96)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Cancelar"
+
+[node name="StartMatchButton" type="Button" parent="ModeModalOverlay/CenterBox/ModalCard/ModalColumn/ActionRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 96)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Iniciar Partida"
