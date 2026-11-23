@@ -17,7 +17,7 @@ theme_override_constants/separation = 20
 unique_name_in_owner = true
 custom_minimum_size = Vector2(12, 0)
 layout_mode = 2
-color = Color(0.85, 0.55, 0.2, 1)
+color = Color(0.76, 0.44, 0.18, 1)
 
 [node name="ContentColumn" type="VBoxContainer" parent="MainRow"]
 layout_mode = 2
@@ -44,20 +44,21 @@ theme_override_constants/separation = 6
 [node name="CategoryLabel" type="Label" parent="MainRow/ContentColumn/HeaderRow/TitleBlock"]
 unique_name_in_owner = true
 layout_mode = 2
-theme_override_colors/font_color = Color(0.96, 0.68, 0.24, 1)
+theme_override_colors/font_color = Color(0.88, 0.64, 0.35, 1)
 theme_override_font_sizes/font_size = 22
 text = "TABULEIRO"
 
 [node name="TitleLabel" type="Label" parent="MainRow/ContentColumn/HeaderRow/TitleBlock"]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_colors/font_color = Color(0.96, 0.92, 0.85, 1)
 theme_override_font_sizes/font_size = 40
 text = "Nome do Jogo"
 
 [node name="ModesLabel" type="Label" parent="MainRow/ContentColumn/HeaderRow/TitleBlock"]
 unique_name_in_owner = true
 layout_mode = 2
-theme_override_colors/font_color = Color(0.68, 0.76, 0.87, 1)
+theme_override_colors/font_color = Color(0.8, 0.72, 0.61, 1)
 theme_override_font_sizes/font_size = 22
 text = "Modos: Contra IA"
 autowrap_mode = 3
@@ -65,7 +66,7 @@ autowrap_mode = 3
 [node name="DescriptionLabel" type="Label" parent="MainRow/ContentColumn"]
 unique_name_in_owner = true
 layout_mode = 2
-theme_override_colors/font_color = Color(0.84, 0.89, 0.95, 1)
+theme_override_colors/font_color = Color(0.91, 0.85, 0.76, 1)
 theme_override_font_sizes/font_size = 26
 text = "Descrição do jogo clássico."
 autowrap_mode = 3
@@ -77,7 +78,7 @@ theme_override_constants/separation = 14
 [node name="StatsLabel" type="Label" parent="MainRow/ContentColumn/FooterRow"]
 unique_name_in_owner = true
 layout_mode = 2
-theme_override_colors/font_color = Color(0.58, 0.78, 0.66, 1)
+theme_override_colors/font_color = Color(0.61, 0.76, 0.55, 1)
 theme_override_font_sizes/font_size = 24
 text = "Nenhuma partida registrada ainda"
 autowrap_mode = 3
@@ -87,4 +88,5 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 92)
 layout_mode = 2
 size_flags_horizontal = 3
+theme_type_variation = &"PrimaryButton"
 text = "Jogar"

@@ -203,12 +203,12 @@ func _refresh_modal_selection_ui() -> void:
 	for mode_key: Variant in _mode_buttons.keys():
 		var btn: Button = _mode_buttons[mode_key] as Button
 		var active: bool = int(mode_key) == _selected_mode
-		btn.modulate = Color(1.0, 0.85, 0.55, 1.0) if active else Color(0.78, 0.82, 0.9, 1.0)
+		btn.modulate = Color(1.0, 0.86, 0.56, 1.0) if active else Color(0.76, 0.68, 0.60, 1.0)
 
 	for diff_key: Variant in _difficulty_buttons.keys():
 		var btn: Button = _difficulty_buttons[diff_key] as Button
 		var active: bool = int(diff_key) == _selected_difficulty
-		btn.modulate = Color(1.0, 0.85, 0.55, 1.0) if active else Color(0.78, 0.82, 0.9, 1.0)
+		btn.modulate = Color(1.0, 0.86, 0.56, 1.0) if active else Color(0.76, 0.68, 0.60, 1.0)
 
 
 func _refresh_sfx_button() -> void:

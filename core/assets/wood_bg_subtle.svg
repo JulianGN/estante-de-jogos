@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="540" height="960" viewBox="0 0 540 960">
+  <defs>
+    <linearGradient id="walnutBase" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#251A13"/>
+      <stop offset="50%" stop-color="#1C130E"/>
+      <stop offset="100%" stop-color="#140D09"/>
+    </linearGradient>
+    <radialGradient id="softVignette" cx="50%" cy="38%" r="72%">
+      <stop offset="0%" stop-color="#3A271B" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#090503" stop-opacity="0.45"/>
+    </radialGradient>
+  </defs>
+  <rect width="540" height="960" fill="url(#walnutBase)"/>
+  <g fill="none" stroke-linecap="round">
+    <path d="M42,0 C58,240 28,520 46,960" stroke="#6E4C34" stroke-width="2" opacity="0.06"/>
+    <path d="M88,0 C74,300 102,640 84,960" stroke="#0C0704" stroke-width="3" opacity="0.07"/>
+    <path d="M138,0 C152,260 124,610 144,960" stroke="#7A563C" stroke-width="1.5" opacity="0.05"/>
+    <path d="M196,0 C180,320 212,660 190,960" stroke="#0B0604" stroke-width="2.5" opacity="0.06"/>
+    <path d="M254,0 C272,220 242,580 260,960" stroke="#6E4C34" stroke-width="2" opacity="0.05"/>
+    <path d="M312,0 C296,350 328,670 308,960" stroke="#0C0704" stroke-width="3" opacity="0.07"/>
+    <path d="M372,0 C390,270 356,600 378,960" stroke="#7A563C" stroke-width="1.5" opacity="0.05"/>
+    <path d="M430,0 C414,290 444,650 426,960" stroke="#0B0604" stroke-width="2.5" opacity="0.06"/>
+    <path d="M488,0 C504,240 474,560 494,960" stroke="#6E4C34" stroke-width="2" opacity="0.06"/>
+  </g>
+  <rect width="540" height="960" fill="url(#softVignette)"/>
+</svg>

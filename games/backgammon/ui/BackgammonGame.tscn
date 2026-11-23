@@ -21,7 +21,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.11, 0.08, 0.06, 1)
+color = Color(0.12, 0.08, 0.055, 1)
 
 [node name="ContentMargin" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -45,6 +45,7 @@ theme_override_constants/separation = 24
 
 [node name="GameHeading" type="Label" parent="ContentMargin/CenterCard/CardColumn"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.96, 0.92, 0.85, 1)
 theme_override_font_sizes/font_size = 46
 text = "Gamão"
 horizontal_alignment = 1
@@ -52,7 +53,7 @@ horizontal_alignment = 1
 [node name="SessionBadgeLabel" type="Label" parent="ContentMargin/CenterCard/CardColumn"]
 unique_name_in_owner = true
 layout_mode = 2
-theme_override_colors/font_color = Color(0.96, 0.68, 0.24, 1)
+theme_override_colors/font_color = Color(0.88, 0.64, 0.35, 1)
 theme_override_font_sizes/font_size = 28
 text = "Sessão ativa"
 horizontal_alignment = 1
@@ -61,7 +62,7 @@ autowrap_mode = 3
 [node name="StatusLabel" type="Label" parent="ContentMargin/CenterCard/CardColumn"]
 unique_name_in_owner = true
 layout_mode = 2
-theme_override_colors/font_color = Color(0.84, 0.89, 0.95, 1)
+theme_override_colors/font_color = Color(0.91, 0.85, 0.76, 1)
 theme_override_font_sizes/font_size = 26
 text = "Casca do Gamão"
 horizontal_alignment = 1
