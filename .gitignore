@@ -1,0 +1,25 @@
+# Godot 4+ specific ignores
+.godot/
+*.translation
+.mono/
+data_*/
+mono_crash.*.json
+
+# Temporários e sistema operacional
+*.tmp
+*.bak
+__pycache__/
+.DS_Store
+Thumbs.db
+
+# Segredos, credenciais e builds Android
+.env
+.env.*
+*.keystore
+*.jks
+*.p12
+export_credentials.cfg
+builds/
+*.apk
+*.aab
+*.idsig

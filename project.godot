@@ -1,0 +1,48 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Estante de Jogos"
+config/description="Biblioteca modular de jogos clássicos mobile."
+run/main_scene="res://core/ui/AppRoot.tscn"
+config/features=PackedStringArray("4.7", "GL Compatibility")
+config/icon="res://core/assets/app_icon.svg"
+config/auto_accept_quit=false
+
+[autoload]
+
+SaveManager="*res://core/services/SaveManager.gd"
+AudioController="*res://core/services/AudioController.gd"
+
+[debug]
+
+gdscript/warnings/untyped_declaration=2
+gdscript/warnings/unused_variable=1
+gdscript/warnings/unused_parameter=1
+gdscript/warnings/return_value_discarded=1
+gdscript/warnings/unsafe_property_access=1
+gdscript/warnings/unsafe_method_access=1
+
+[display]
+
+window/size/viewport_width=1080
+window/size/viewport_height=1920
+window/size/window_width_override=450
+window/size/window_height_override=800
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+window/handheld/orientation="portrait"
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true
