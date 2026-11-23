@@ -29,9 +29,9 @@ Projeto mobile Android em **Godot 4.7.2 (GDScript)** concebido como um hub modul
 - [x] Validar testes unitários do núcleo, smoke test de cenas e verificação automática das fronteiras arquiteturais.
 
 ### Etapa 2 — Pipeline Android & Smoke Test no Dispositivo
-- [ ] Configurar `export_presets.cfg` para Android (arm64-v8a / armeabi-v7a, orientação travada em Portrait).
-- [ ] Aplicar **Princípio de Mínima Permissão**: auditar `export_presets.cfg` e o `AndroidManifest.xml` gerado garantindo ausência total de permissões desnecessárias (sem rede, localização, câmera, microfone ou armazenamento externo).
-- [ ] Configurar keystore local de debug (fora do controle de versão) e validar compilação de APK.
+- [x] Configurar `export_presets.cfg` para Android (arm64-v8a / armeabi-v7a, orientação travada em Portrait).
+- [x] Aplicar **Princípio de Mínima Permissão**: auditar `export_presets.cfg` e o `AndroidManifest.xml` gerado garantindo ausência total de permissões desnecessárias (sem rede, localização, câmera, microfone ou armazenamento externo).
+- [x] Configurar keystore local de debug (fora do controle de versão) e validar compilação de APK.
 - [ ] Instalar e validar resolução, toque, botão Voltar do Android e persistência em dispositivo real/emulador via `adb install`.
 
 ### Etapa 3 — Motor Lógico Puro do Gamão
